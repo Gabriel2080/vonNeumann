@@ -23,7 +23,7 @@ public class teste {
         System.out.println("nbits_t = " + nbits_t + "\n");
 
         int x = 10_560_325;
-        int w = x % K;
+        int w = x % (1 << nbits_w);
         int r = (x >> nbits_w) % nlinhas;
         int t = x >> (nbits_w + nbits_r);
         int s = x >> nbits_w;

@@ -14,8 +14,8 @@ public class Main {
         // cria componentes da arquitetura
 
         IO io = new IO(System.out);
-        RAM ram = new RAM(128);
-        Cache cache = new Cache(8, ram);
+        RAM ram = new RAM(16 * 1024 * 1024);
+        CacheDireto cache = new CacheDireto(32, 4, 16, ram);
         CPU cpu = new CPU(io, cache);
 
         try {
